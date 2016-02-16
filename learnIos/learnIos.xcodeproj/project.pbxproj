@@ -17,6 +17,7 @@
 		1E752D2D1C7344C300F2EBB0 /* learnIosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E752D2C1C7344C300F2EBB0 /* learnIosTests.m */; };
 		1E752D381C7344C300F2EBB0 /* learnIosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E752D371C7344C300F2EBB0 /* learnIosUITests.m */; };
 		1E752D481C73453400F2EBB0 /* PersistenceUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E752D471C73453400F2EBB0 /* PersistenceUtils.m */; };
+		ECAB6A961C7380ED00594365 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAB6A951C7380ED00594365 /* libsqlite3.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		1E752D391C7344C300F2EBB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E752D461C73453400F2EBB0 /* PersistenceUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PersistenceUtils.h; path = Utils/PersistenceUtils.h; sourceTree = "<group>"; };
 		1E752D471C73453400F2EBB0 /* PersistenceUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PersistenceUtils.m; path = Utils/PersistenceUtils.m; sourceTree = "<group>"; };
+		ECAB6A951C7380ED00594365 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECAB6A961C7380ED00594365 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +89,7 @@
 		1E752D031C7344C200F2EBB0 = {
 			isa = PBXGroup;
 			children = (
+				ECAB6A951C7380ED00594365 /* libsqlite3.tbd */,
 				1E752D0E1C7344C200F2EBB0 /* learnIos */,
 				1E752D2B1C7344C300F2EBB0 /* learnIosTests */,
 				1E752D361C7344C300F2EBB0 /* learnIosUITests */,
@@ -516,6 +520,7 @@
 				1E752D3E1C7344C300F2EBB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1E752D3F1C7344C300F2EBB0 /* Build configuration list for PBXNativeTarget "learnIosTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +529,7 @@
 				1E752D411C7344C300F2EBB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1E752D421C7344C300F2EBB0 /* Build configuration list for PBXNativeTarget "learnIosUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +538,7 @@
 				1E752D441C7344C300F2EBB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
