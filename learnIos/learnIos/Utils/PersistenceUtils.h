@@ -93,20 +93,33 @@
 /*
  sqlite3提供了C/C++接口
  Cora Data是apple提供的ORM框架
- 
+ sqlite3创建的数据库默认是UTF-8编码的
  
  */
 
 /**
- *  执行sql
+ *  执行sql  用于插入、删除、修改
  *
  *  @param sql <#sql description#>
  */
 +(void) executeNoQuery:(NSString*) sql;
 
+/**
+ *  执行sql  用于插入、删除、修改 对于有?号占位符的sql语句
+ *
+ *  @param sql <#sql description#>
+ */
++(void) executeNoQuery2:(NSString*) sql;
+
+/**
+ *  执行查询sql
+ *
+ *  @param sql <#sql description#>
+ */
++(void) executeQuery:(NSString*) sql;
 
 
-
+#pragma mark -CoreData
 
 
 

@@ -113,34 +113,151 @@
 
 
 /**
- *  执行sql
+ *  执行sql 用于插入、删除、修改  sql语句中可以用?来作为占位符
  *
  *  @param sql <#sql description#>
  */
 +(void) executeNoQuery:(NSString*) sql{
+    [self commonSqlProcess:^(sqlite3* database){
+        int result = sqlite3_exec(database, [sql UTF8String], NULL, NULL, NULL);
+        if (result == SQLITE_OK) {
+            //执行成功
+        }
+    }];
+}
+
+/**
+ *  执行sql  用于插入、删除、修改 对于有?号占位符的sql语句
+ *
+ *  @param sql <#sql description#>
+ */
++(void) executeNoQuery2:(NSString*) sql{
+    [self commonSqlProcess:^(sqlite3* database){
+        sqlite3_stmt* statement;
+        //第三个参数，当为负时，表示sql字符串的长度直到\0结束的位置
+        int result = sqlite3_prepare_v2(database, [sql UTF8String], -1, &statement, nil);
+        
+        if (result == SQLITE_OK) {
+            //在此位置准备占位符
+            //第二个参数：要设置的占位符索引，从1开始计数，
+            //第三个参数：替换的值
+            sqlite3_bind_int(statement, 1, 235);
+            sqlite3_bind_text(statement, 2, [sql UTF8String], -1, NULL);
+        }
+        
+        //#define SQLITE_DONE        101  /* sqlite3_step() has finished executing */
+        if(sqlite3_step(statement) == SQLITE_DONE)
+        {
+            //执行成功
+        }
+        
+        sqlite3_finalize(statement);
+        
+    }];
+}
+
+/**
+ *  执行查询sql， sql语句中可以用?来作为占位符
+ *
+ *  @param sql <#sql description#>
+ */
++(void) executeQuery:(NSString*) sql{
+    //NSString* query = @"SELECT Id,Name,Age FROM TABLENAME";
+    
+    [self commonSqlProcess:^(sqlite3* database){
+        sqlite3_stmt* statement;
+        //第三个参数，当为负时，表示sql字符串的长度直到\0结束的位置
+        int result = sqlite3_prepare_v2(database, [sql UTF8String], -1, &statement, nil);
+        
+        if(result != SQLITE_OK){
+            //Destroy A Prepared Statement Object
+            sqlite3_finalize(statement);//statement为NULL是无害的
+            return;
+        }
+        
+        //在此位置准备占位符
+        //第二个参数：要设置的占位符索引，从1开始计数，
+        //第三个参数：替换的值
+        sqlite3_bind_int(statement, 1, 235);
+        sqlite3_bind_text(statement, 2, [sql UTF8String], -1, NULL);
+        
+        
+//#define SQLITE_ROW         100  /* sqlite3_step() has another row ready */
+//#define SQLITE_DONE        101  /* sqlite3_step() has finished executing */
+        //step计算sql语句
+        while (sqlite3_step(statement) == SQLITE_ROW) {
+            //has another row ready
+            //int rowNum = sqlite3_column_int(statement, 0);
+            //NSString* name = [[NSString alloc] initWithUTF8String:(char *)sqlite3_column_text(statement, 1)];
+        }
+        
+        //Destroy A Prepared Statement Object
+        sqlite3_finalize(statement);
+        
+    }];
+    
+    
     
 }
 
 
-+(void) sqlProcess:(void(^)(void)) action{
+
+/**
+ *  初始化数据库
+ */
++(void) initDb{
+    [self commonSqlProcess:^(sqlite3* database){
+        //IF NOT EXISTS才创建表，所以这是可以重复执行的
+        NSString* createSql = @"CREATE TABLE IF NOT EXISTS TABLENAME(Id INTEGER PRIMARY KEY AUTOINCREMENT, Name TEXT NOT NULL, Age INTEGER)";
+        int result = sqlite3_exec(database, [createSql UTF8String], NULL, NULL, NULL);
+        if (result == SQLITE_OK) {
+            //执行成功
+        }
+    }];
+}
+
+
+/**
+ *  处理sql，
+ *
+ *  @param action 实际处理的代码，不需要关心数据库的打开关闭，而专注于业务
+ */
++(void) commonSqlProcess:(void(^)(sqlite3*)) action{
     sqlite3* database;
-    [[self getSqlDb] UTF8String];
+    const char* dbPath = [[self getSqlDb] UTF8String];
+    //如果数据库存在，打开数据库，如果数据库不存在，新建一个
+    int openResult = sqlite3_open(dbPath, &database);
+    
+    if (openResult != SQLITE_OK) {
+        //打开连接失败  关闭连接，注：sqlite3_close可以接收NULL
+        sqlite3_close(database);
+        return;
+    }
+    @try{
+        if (action) {
+            //实际的处理
+            action(database);
+        }
+    }
+    @finally{
+        sqlite3_close(database);
+    }
 }
 
 /**
- *  <#Description#>
+ *  获取sql执行使用的DB文件目录
  *
  *
  *  @return <#return value description#>
  */
 +(NSString*) getSqlDb{
     NSString* docPath = [self getDirectoryOfDocuments];
-    
+    //[string UTF8String]   [NSString stringWithUTF8String:dbPath]; [[NSString alloc] initWithUTF8String:dbPath]来在NSString和const char*之间进行转换
     return [docPath stringByAppendingPathComponent:@"cmlu.db"];
 }
 
 
-
+#pragma mark -CoreData
 
 
 
