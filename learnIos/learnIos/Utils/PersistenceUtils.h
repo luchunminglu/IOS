@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <sqlite3.h>
+#import <CoreData/CoreData.h>
 
 
 @interface PersistenceUtils : NSObject
@@ -122,7 +123,10 @@
 #pragma mark -CoreData
 
 
-
+/**
+ *  <#Description#>
+ */
++(void) execute;
 
 
 

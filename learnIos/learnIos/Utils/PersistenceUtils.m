@@ -259,7 +259,12 @@
 
 #pragma mark -CoreData
 
-
+/**
+ *  <#Description#>
+ */
++(void) execute{
+    //[NSEntityDescription insertNewObjectForEntityForName:<#(nonnull NSString *)#> inManagedObjectContext:<#(nonnull NSManagedObjectContext *)#>]
+}
 
 
 
