@@ -80,11 +80,182 @@
 +(NSDictionary*) readDictionaryFromFile:(NSString*) fileName;
 
 
+#pragma mark -archive
+
+//archive需要补充
+
+
+
+
 #pragma mark -sqlite3
 
 
+/*
+ sqlite3提供了C/C++接口
+ Cora Data是apple提供的ORM框架
+ 
+ 
+ */
 
-+(sqlite3*) openSqlite:(NSString*) filePath;
+/**
+ *  执行sql
+ *
+ *  @param sql <#sql description#>
+ */
++(void) executeNoQuery:(NSString*) sql;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

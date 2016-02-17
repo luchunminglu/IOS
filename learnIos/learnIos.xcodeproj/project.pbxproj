@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E593A181C73FEA800AA1AB2 /* HttpUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E593A171C73FEA800AA1AB2 /* HttpUtils.m */; };
+		1E72668F1C74008C004DFFC6 /* StringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E72668E1C74008C004DFFC6 /* StringUtils.m */; };
+		1E7266921C740116004DFFC6 /* ThreadUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E7266911C740116004DFFC6 /* ThreadUtils.m */; };
+		1E7266951C74015B004DFFC6 /* UserDefaultUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E7266941C74015B004DFFC6 /* UserDefaultUtils.m */; };
 		1E752D111C7344C200F2EBB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E752D101C7344C200F2EBB0 /* main.m */; };
 		1E752D141C7344C200F2EBB0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E752D131C7344C200F2EBB0 /* AppDelegate.m */; };
 		1E752D171C7344C200F2EBB0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E752D161C7344C200F2EBB0 /* ViewController.m */; };
@@ -17,6 +21,7 @@
 		1E752D2D1C7344C300F2EBB0 /* learnIosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E752D2C1C7344C300F2EBB0 /* learnIosTests.m */; };
 		1E752D381C7344C300F2EBB0 /* learnIosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E752D371C7344C300F2EBB0 /* learnIosUITests.m */; };
 		1E752D481C73453400F2EBB0 /* PersistenceUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E752D471C73453400F2EBB0 /* PersistenceUtils.m */; };
+		5541BE0F01EC201D64B225C4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 011361910B954799D80B5C44 /* libPods.a */; };
 		ECAB6A961C7380ED00594365 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAB6A951C7380ED00594365 /* libsqlite3.tbd */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +43,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		011361910B954799D80B5C44 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E593A161C73FEA800AA1AB2 /* HttpUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpUtils.h; path = Utils/HttpUtils.h; sourceTree = "<group>"; };
+		1E593A171C73FEA800AA1AB2 /* HttpUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HttpUtils.m; path = Utils/HttpUtils.m; sourceTree = "<group>"; };
+		1E72668D1C74008C004DFFC6 /* StringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StringUtils.h; path = Utils/StringUtils.h; sourceTree = "<group>"; };
+		1E72668E1C74008C004DFFC6 /* StringUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StringUtils.m; path = Utils/StringUtils.m; sourceTree = "<group>"; };
+		1E7266901C740116004DFFC6 /* ThreadUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThreadUtils.h; path = Utils/ThreadUtils.h; sourceTree = "<group>"; };
+		1E7266911C740116004DFFC6 /* ThreadUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThreadUtils.m; path = Utils/ThreadUtils.m; sourceTree = "<group>"; };
+		1E7266931C74015B004DFFC6 /* UserDefaultUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserDefaultUtils.h; path = Utils/UserDefaultUtils.h; sourceTree = "<group>"; };
+		1E7266941C74015B004DFFC6 /* UserDefaultUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserDefaultUtils.m; path = Utils/UserDefaultUtils.m; sourceTree = "<group>"; };
 		1E752D0C1C7344C200F2EBB0 /* learnIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = learnIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E752D101C7344C200F2EBB0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1E752D121C7344C200F2EBB0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -57,7 +71,9 @@
 		1E752D391C7344C300F2EBB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E752D461C73453400F2EBB0 /* PersistenceUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PersistenceUtils.h; path = Utils/PersistenceUtils.h; sourceTree = "<group>"; };
 		1E752D471C73453400F2EBB0 /* PersistenceUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PersistenceUtils.m; path = Utils/PersistenceUtils.m; sourceTree = "<group>"; };
+		D6B9683965A4298DEB1632DF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		ECAB6A951C7380ED00594365 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		EF6D66F7CD45FF1FC7AA0E0B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +82,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECAB6A961C7380ED00594365 /* libsqlite3.tbd in Frameworks */,
+				5541BE0F01EC201D64B225C4 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +111,8 @@
 				1E752D2B1C7344C300F2EBB0 /* learnIosTests */,
 				1E752D361C7344C300F2EBB0 /* learnIosUITests */,
 				1E752D0D1C7344C200F2EBB0 /* Products */,
+				A9D503493389CED0B02294AF /* Pods */,
+				D665BADF1AEBB23F0C5C54FC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -156,8 +175,33 @@
 			children = (
 				1E752D461C73453400F2EBB0 /* PersistenceUtils.h */,
 				1E752D471C73453400F2EBB0 /* PersistenceUtils.m */,
+				1E593A161C73FEA800AA1AB2 /* HttpUtils.h */,
+				1E593A171C73FEA800AA1AB2 /* HttpUtils.m */,
+				1E72668D1C74008C004DFFC6 /* StringUtils.h */,
+				1E72668E1C74008C004DFFC6 /* StringUtils.m */,
+				1E7266901C740116004DFFC6 /* ThreadUtils.h */,
+				1E7266911C740116004DFFC6 /* ThreadUtils.m */,
+				1E7266931C74015B004DFFC6 /* UserDefaultUtils.h */,
+				1E7266941C74015B004DFFC6 /* UserDefaultUtils.m */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		A9D503493389CED0B02294AF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EF6D66F7CD45FF1FC7AA0E0B /* Pods.debug.xcconfig */,
+				D6B9683965A4298DEB1632DF /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D665BADF1AEBB23F0C5C54FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				011361910B954799D80B5C44 /* libPods.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,9 +211,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E752D3C1C7344C300F2EBB0 /* Build configuration list for PBXNativeTarget "learnIos" */;
 			buildPhases = (
+				1747D4C785CB18C5FFAF81F9 /* Check Pods Manifest.lock */,
 				1E752D081C7344C200F2EBB0 /* Sources */,
 				1E752D091C7344C200F2EBB0 /* Frameworks */,
 				1E752D0A1C7344C200F2EBB0 /* Resources */,
+				C1DA3F37A7545DE904DA21ED /* Embed Pods Frameworks */,
+				787F83AEC5DC5101A38136B8 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -285,15 +332,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1747D4C785CB18C5FFAF81F9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		787F83AEC5DC5101A38136B8 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1DA3F37A7545DE904DA21ED /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1E752D081C7344C200F2EBB0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E72668F1C74008C004DFFC6 /* StringUtils.m in Sources */,
+				1E7266921C740116004DFFC6 /* ThreadUtils.m in Sources */,
 				1E752D171C7344C200F2EBB0 /* ViewController.m in Sources */,
 				1E752D141C7344C200F2EBB0 /* AppDelegate.m in Sources */,
 				1E752D1D1C7344C200F2EBB0 /* learnIos.xcdatamodeld in Sources */,
+				1E593A181C73FEA800AA1AB2 /* HttpUtils.m in Sources */,
 				1E752D111C7344C200F2EBB0 /* main.m in Sources */,
+				1E7266951C74015B004DFFC6 /* UserDefaultUtils.m in Sources */,
 				1E752D481C73453400F2EBB0 /* PersistenceUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,6 +532,7 @@
 		};
 		1E752D3D1C7344C300F2EBB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF6D66F7CD45FF1FC7AA0E0B /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = learnIos/Info.plist;
@@ -444,6 +544,7 @@
 		};
 		1E752D3E1C7344C300F2EBB0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6B9683965A4298DEB1632DF /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = learnIos/Info.plist;
