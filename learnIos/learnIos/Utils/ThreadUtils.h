@@ -13,7 +13,7 @@
 
 
 /**
- *  在多线程中执行action回调
+ *  在多线程中执行action回调  GCD支持Cocoa的内存管理机制，因此可以再提交到queue的block自由的使用OC对象。每个dispatch queue维护自己的autorelease pool 确保释放autorelease对象，但是queue不保证这些对象实际释放时间。如果应用需要大量内存，可以自建autorelease pool.除非有明确理由，否则不建议这么做。
  *
  *  @param action action回调
  */
@@ -27,7 +27,7 @@
 +(void) dispatchMain:(void (^)(void))action;
 
 /**
- *  将一系列actions分布到多线程中
+ *  将一系列actions分布到多线程中 GCD支持Cocoa的内存管理机制，因此可以再提交到queue的block自由的使用OC对象。每个dispatch queue维护自己的autorelease pool 确保释放autorelease对象，但是queue不保证这些对象实际释放时间。如果应用需要大量内存，可以自建autorelease pool.除非有明确理由，否则不建议这么做。
  *
  *  @param actions   一系列action
  *  @param completed 当action完成时的异步回调
