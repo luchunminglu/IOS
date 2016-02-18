@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E4322121C755D59000953B7 /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E4322111C755D59000953B7 /* DateUtils.m */; };
 		1E593A181C73FEA800AA1AB2 /* HttpUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E593A171C73FEA800AA1AB2 /* HttpUtils.m */; };
 		1E72668F1C74008C004DFFC6 /* StringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E72668E1C74008C004DFFC6 /* StringUtils.m */; };
 		1E7266921C740116004DFFC6 /* ThreadUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E7266911C740116004DFFC6 /* ThreadUtils.m */; };
@@ -47,6 +48,8 @@
 
 /* Begin PBXFileReference section */
 		011361910B954799D80B5C44 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E4322101C755D59000953B7 /* DateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateUtils.h; path = Utils/DateUtils.h; sourceTree = "<group>"; };
+		1E4322111C755D59000953B7 /* DateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateUtils.m; path = Utils/DateUtils.m; sourceTree = "<group>"; };
 		1E593A161C73FEA800AA1AB2 /* HttpUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpUtils.h; path = Utils/HttpUtils.h; sourceTree = "<group>"; };
 		1E593A171C73FEA800AA1AB2 /* HttpUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HttpUtils.m; path = Utils/HttpUtils.m; sourceTree = "<group>"; };
 		1E72668D1C74008C004DFFC6 /* StringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StringUtils.h; path = Utils/StringUtils.h; sourceTree = "<group>"; };
@@ -203,6 +206,8 @@
 				1E7266911C740116004DFFC6 /* ThreadUtils.m */,
 				1E7266931C74015B004DFFC6 /* UserDefaultUtils.h */,
 				1E7266941C74015B004DFFC6 /* UserDefaultUtils.m */,
+				1E4322101C755D59000953B7 /* DateUtils.h */,
+				1E4322111C755D59000953B7 /* DateUtils.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -422,6 +427,7 @@
 				1E752D171C7344C200F2EBB0 /* ViewController.m in Sources */,
 				1E72669C1C745458004DFFC6 /* MainViewController.m in Sources */,
 				1E752D141C7344C200F2EBB0 /* AppDelegate.m in Sources */,
+				1E4322121C755D59000953B7 /* DateUtils.m in Sources */,
 				1E752D1D1C7344C200F2EBB0 /* learnIos.xcdatamodeld in Sources */,
 				1E593A181C73FEA800AA1AB2 /* HttpUtils.m in Sources */,
 				1E752D111C7344C200F2EBB0 /* main.m in Sources */,
