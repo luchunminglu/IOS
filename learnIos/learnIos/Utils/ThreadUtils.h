@@ -35,5 +35,23 @@
 +(void) dispatchGroup:(NSArray*) actions onCompleted:(void (^)(void)) completed;
 
 
+#pragma mark -定时器Dispatch实现
+
+/**
+ *  在指定秒数之后在主线程上执行一段代码 仅执行一次
+ *
+ *  @param action  <#action description#>
+ *  @param seconds <#seconds description#>
+ */
++(void) dispatchOnce:(void (^)(void))action after:(double) seconds;
+
+
+/**
+ *  在指定秒数之后在主线程上执行一段代码 仅执行一次
+ *
+ *  @param action  <#action description#>
+ *  @param seconds <#seconds description#>
+ */
++(void) dispatch:(void (^)(void))action repeatTime:(double) periodSeconds;
 
 @end

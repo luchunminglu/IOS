@@ -24,6 +24,7 @@
 		1E752D2D1C7344C300F2EBB0 /* learnIosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E752D2C1C7344C300F2EBB0 /* learnIosTests.m */; };
 		1E752D381C7344C300F2EBB0 /* learnIosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E752D371C7344C300F2EBB0 /* learnIosUITests.m */; };
 		1E752D481C73453400F2EBB0 /* PersistenceUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E752D471C73453400F2EBB0 /* PersistenceUtils.m */; };
+		1E7D50BE1C7D788B00A2B3F5 /* TimerEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D50BD1C7D788B00A2B3F5 /* TimerEx.m */; };
 		5541BE0F01EC201D64B225C4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 011361910B954799D80B5C44 /* libPods.a */; };
 		EC52DCF21C74BD0100284E3A /* QuartzUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC52DCF11C74BD0100284E3A /* QuartzUIView.m */; };
 		EC52DCF51C74BE0B00284E3A /* UIColor+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = EC52DCF41C74BE0B00284E3A /* UIColor+Random.m */; };
@@ -82,6 +83,8 @@
 		1E752D391C7344C300F2EBB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E752D461C73453400F2EBB0 /* PersistenceUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PersistenceUtils.h; path = Utils/PersistenceUtils.h; sourceTree = "<group>"; };
 		1E752D471C73453400F2EBB0 /* PersistenceUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PersistenceUtils.m; path = Utils/PersistenceUtils.m; sourceTree = "<group>"; };
+		1E7D50BC1C7D788A00A2B3F5 /* TimerEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimerEx.h; path = Utils/TimerEx.h; sourceTree = "<group>"; };
+		1E7D50BD1C7D788B00A2B3F5 /* TimerEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimerEx.m; path = Utils/TimerEx.m; sourceTree = "<group>"; };
 		D6B9683965A4298DEB1632DF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EC52DCF01C74BD0100284E3A /* QuartzUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuartzUIView.h; path = Removable/QuartzUIView.h; sourceTree = "<group>"; };
 		EC52DCF11C74BD0100284E3A /* QuartzUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuartzUIView.m; path = Removable/QuartzUIView.m; sourceTree = "<group>"; };
@@ -213,6 +216,8 @@
 				1E4322111C755D59000953B7 /* DateUtils.m */,
 				1E1BFD7D1C7AA57A00C99201 /* ScreenUtils.h */,
 				1E1BFD7E1C7AA57A00C99201 /* ScreenUtils.m */,
+				1E7D50BC1C7D788A00A2B3F5 /* TimerEx.h */,
+				1E7D50BD1C7D788B00A2B3F5 /* TimerEx.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -438,6 +443,7 @@
 				1E593A181C73FEA800AA1AB2 /* HttpUtils.m in Sources */,
 				1E752D111C7344C200F2EBB0 /* main.m in Sources */,
 				1E7266951C74015B004DFFC6 /* UserDefaultUtils.m in Sources */,
+				1E7D50BE1C7D788B00A2B3F5 /* TimerEx.m in Sources */,
 				EC52DCF21C74BD0100284E3A /* QuartzUIView.m in Sources */,
 				1E752D481C73453400F2EBB0 /* PersistenceUtils.m in Sources */,
 			);

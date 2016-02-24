@@ -60,4 +60,47 @@
 }
 
 
+#pragma mark -定时器Dispatch实现
+
+/**
+ *  在指定秒数之后在主线程上执行一段代码  仅执行一次
+ *
+ *  @param action  <#action description#>
+ *  @param seconds <#seconds description#>
+ */
++(void) dispatchOnce:(void (^)(void))action after:(double) seconds{
+    dispatch_time_t executedTime = dispatch_time(DISPATCH_TIME_NOW, seconds*NSEC_PER_SEC);
+    dispatch_after(executedTime, dispatch_get_main_queue(), ^(void){
+        if (action) {
+            action();
+        }
+    });
+}
+
+
+/**
+ *  在指定秒周期后在多线程上执行一段代码 重复执行
+ *
+ *  暂时没有提供停止定时器的，
+ *  @param action  <#action description#>
+ *  @param seconds 重复执行的周期
+ */
++(void) dispatch:(void (^)(void))action repeatTime:(double) periodSeconds{
+    //The requested global concurrent queue.
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
+    dispatch_source_set_timer(timer, dispatch_walltime(NULL, 0), periodSeconds*NSEC_PER_SEC, 0);
+    
+    dispatch_source_set_event_handler(timer, ^(void){
+        if(action){
+            action();
+        }
+    });
+    
+    dispatch_resume(timer);
+    
+}
+
+
+
 @end

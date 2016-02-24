@@ -21,6 +21,8 @@
 +(NSString*) convertToString:(NSDate*) date format:(NSString*) foramt{
     NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:foramt];
+    //设置时区，不然会差8小时
+    [formatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"UTC"]];
     return [formatter stringFromDate:date];
 }
 
@@ -35,6 +37,8 @@
 +(NSDate*) convertToDate:(NSString*) str format:(NSString*) foramt{
     NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:foramt];
+    //设置时区，不然会差8小时
+    [formatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"UTC"]];
     return [formatter dateFromString:str];
 }
 
