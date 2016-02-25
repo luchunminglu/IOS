@@ -84,6 +84,10 @@
         return @"";
     }
     
+    if ([[NSNull null] isEqual:s]) {
+        return @"";
+    }
+    
     return [s stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
 
