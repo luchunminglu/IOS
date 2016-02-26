@@ -48,6 +48,39 @@
  */
 +(NSString*) trim:(NSString*) s;
 
+/**
+ *  判断字符串s1中是否包含s2
+ *
+ *  @param s1           <#s1 description#>
+ *  @param s2           <#s2 description#>
+ *  @param isIgnoreCase <#isIgnoreCase description#>
+ *
+ *  @return <#return value description#>
+ */
++(BOOL) contains:(NSString*) s1 To:  (NSString*) s2 ByIgnoreCase:(BOOL) isIgnoreCase;
 
+
+/**
+ *  将字符串分割，同时去除空项
+ 
+ *
+ *  @param s1       <#s1 description#>
+ *  @param separaor <#separaor description#>
+ *
+ *  @return <#return value description#>
+ */
++(NSArray*) split:(NSString*) s1 splitor:(NSString*)separaor;
+
+
+/**
+ *  将字符串以空白分割，同时去除空项
+ 
+ *
+ *  @param s1       <#s1 description#>
+ *  @param separaor <#separaor description#>
+ *
+ *  @return <#return value description#>
+ */
++(NSArray*) split:(NSString*) s1;
 
 @end

@@ -26,6 +26,7 @@
 		1E752D481C73453400F2EBB0 /* PersistenceUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E752D471C73453400F2EBB0 /* PersistenceUtils.m */; };
 		1E7D50BE1C7D788B00A2B3F5 /* TimerEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E7D50BD1C7D788B00A2B3F5 /* TimerEx.m */; };
 		1EEB837F1C7ECD82009AF8D5 /* ToastUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EEB837E1C7ECD82009AF8D5 /* ToastUtils.m */; };
+		1EEB83821C7FDD99009AF8D5 /* JsonUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EEB83811C7FDD99009AF8D5 /* JsonUtils.m */; };
 		5541BE0F01EC201D64B225C4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 011361910B954799D80B5C44 /* libPods.a */; };
 		EC52DCF21C74BD0100284E3A /* QuartzUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC52DCF11C74BD0100284E3A /* QuartzUIView.m */; };
 		EC52DCF51C74BE0B00284E3A /* UIColor+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = EC52DCF41C74BE0B00284E3A /* UIColor+Random.m */; };
@@ -88,6 +89,8 @@
 		1E7D50BD1C7D788B00A2B3F5 /* TimerEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimerEx.m; path = Utils/TimerEx.m; sourceTree = "<group>"; };
 		1EEB837D1C7ECD81009AF8D5 /* ToastUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ToastUtils.h; path = Utils/ToastUtils.h; sourceTree = "<group>"; };
 		1EEB837E1C7ECD82009AF8D5 /* ToastUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ToastUtils.m; path = Utils/ToastUtils.m; sourceTree = "<group>"; };
+		1EEB83801C7FDD99009AF8D5 /* JsonUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JsonUtils.h; path = Utils/JsonUtils.h; sourceTree = "<group>"; };
+		1EEB83811C7FDD99009AF8D5 /* JsonUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JsonUtils.m; path = Utils/JsonUtils.m; sourceTree = "<group>"; };
 		D6B9683965A4298DEB1632DF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EC52DCF01C74BD0100284E3A /* QuartzUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuartzUIView.h; path = Removable/QuartzUIView.h; sourceTree = "<group>"; };
 		EC52DCF11C74BD0100284E3A /* QuartzUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuartzUIView.m; path = Removable/QuartzUIView.m; sourceTree = "<group>"; };
@@ -224,6 +227,8 @@
 				1E7D50BD1C7D788B00A2B3F5 /* TimerEx.m */,
 				1EEB837D1C7ECD81009AF8D5 /* ToastUtils.h */,
 				1EEB837E1C7ECD82009AF8D5 /* ToastUtils.m */,
+				1EEB83801C7FDD99009AF8D5 /* JsonUtils.h */,
+				1EEB83811C7FDD99009AF8D5 /* JsonUtils.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -451,6 +456,7 @@
 				1E752D171C7344C200F2EBB0 /* ViewController.m in Sources */,
 				1E72669C1C745458004DFFC6 /* MainViewController.m in Sources */,
 				1E1BFD7F1C7AA57A00C99201 /* ScreenUtils.m in Sources */,
+				1EEB83821C7FDD99009AF8D5 /* JsonUtils.m in Sources */,
 				1E752D141C7344C200F2EBB0 /* AppDelegate.m in Sources */,
 				1E4322121C755D59000953B7 /* DateUtils.m in Sources */,
 				1E752D1D1C7344C200F2EBB0 /* learnIos.xcdatamodeld in Sources */,

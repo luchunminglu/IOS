@@ -209,6 +209,7 @@
     [self commonSqlProcess:^(sqlite3* database){
         //IF NOT EXISTS才创建表，所以这是可以重复执行的
         NSString* createSql = @"CREATE TABLE IF NOT EXISTS TABLENAME(Id INTEGER PRIMARY KEY AUTOINCREMENT, Name TEXT NOT NULL, Age INTEGER)";
+        //NSString* sql = @"select Id,AssoId,MessageType,Sender,Title,Content,CreateTime,IsRead from DT_MESSAGE order by IsRead Asc,AssoId desc limit 50 offset 10";
         int result = sqlite3_exec(database, [createSql UTF8String], NULL, NULL, NULL);
         if (result == SQLITE_OK) {
             //执行成功

@@ -91,5 +91,104 @@
     return [s stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
 
+/**
+ *  判断字符串s1中是否包含s2
+ *  如果s1 s2 均为空白，则认为它们等价
+ *  @param s1           <#s1 description#>
+ *  @param s2           <#s2 description#>
+ *  @param isIgnoreCase <#isIgnoreCase description#>
+ *
+ *  @return <#return value description#>
+ */
++(BOOL) contains:(NSString*) s1 To:  (NSString*) s2 ByIgnoreCase:(BOOL) isIgnoreCase{
+    if([self isNullOrWhiteSpace:s1] && [self isNullOrWhiteSpace:s2]){
+        return YES;
+    }
+    
+    if(s1 == nil || s2 == nil){
+        return NO;
+    }
+    
+    if(isIgnoreCase){
+        NSRange range = [[[self trim:s1] lowercaseString] rangeOfString: [[self trim:s2] lowercaseString]];
+        
+        if (range.location != NSNotFound) {
+            return YES;
+        }
+        else{
+            return NO;
+        }
+        
+    }
+    else{
+        NSRange range = [[self trim:s1]  rangeOfString: [self trim:s2]];
+        
+        if (range.location != NSNotFound) {
+            return YES;
+        }
+        else{
+            return NO;
+        }
+    }
+}
+
+
+/**
+ *  将字符串分割，同时去除空项
+ 
+ *
+ *  @param s1       <#s1 description#>
+ *  @param separaor <#separaor description#>
+ *
+ *  @return <#return value description#>
+ */
++(NSArray*) split:(NSString*) s1 splitor:(NSString*)separaor{
+    NSMutableArray* array = [NSMutableArray new];
+    if ([self isNullOrWhiteSpace:s1]) {
+        return array;
+    }
+    
+    NSArray* result = [s1 componentsSeparatedByString:separaor];
+    
+    for (NSString* item in result) {
+        if ([self isNullOrWhiteSpace:item]) {
+            continue;
+        }
+        
+        [array addObject:item];
+    }
+    
+    return array;
+}
+
+
+/**
+ *  将字符串以空白分割，同时去除空项
+ 
+ *
+ *  @param s1       <#s1 description#>
+ *  @param separaor <#separaor description#>
+ *
+ *  @return <#return value description#>
+ */
++(NSArray*) split:(NSString*) s1{
+    NSMutableArray* array = [NSMutableArray new];
+    if ([self isNullOrWhiteSpace:s1]) {
+        return array;
+    }
+    
+    NSArray* result = [s1 componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    
+    for (NSString* item in result) {
+        if ([self isNullOrWhiteSpace:item]) {
+            continue;
+        }
+        
+        [array addObject:item];
+    }
+    
+    return array;
+}
+
 
 @end
