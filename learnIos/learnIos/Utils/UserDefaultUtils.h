@@ -59,5 +59,14 @@
  */
 +(void) setBool:(BOOL) value forKey:(NSString*) key;
 
+/**
+ *  是否包含key
+ *
+ *  @param key <#key description#>
+ *
+ *  @return <#return value description#>
+ */
++(BOOL) containsKey:(NSString*) key;
+
 
 @end
