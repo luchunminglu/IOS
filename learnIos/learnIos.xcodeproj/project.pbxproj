@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1E1BFD7F1C7AA57A00C99201 /* ScreenUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E1BFD7E1C7AA57A00C99201 /* ScreenUtils.m */; };
+		1E2974FE1C83D76C009E4EF0 /* SoundHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2974FD1C83D76C009E4EF0 /* SoundHelper.m */; };
+		1E2975001C83D785009E4EF0 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E2974FF1C83D785009E4EF0 /* AudioToolbox.framework */; };
 		1E4322121C755D59000953B7 /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E4322111C755D59000953B7 /* DateUtils.m */; };
 		1E593A181C73FEA800AA1AB2 /* HttpUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E593A171C73FEA800AA1AB2 /* HttpUtils.m */; };
 		1E72668F1C74008C004DFFC6 /* StringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E72668E1C74008C004DFFC6 /* StringUtils.m */; };
@@ -54,6 +56,9 @@
 		011361910B954799D80B5C44 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E1BFD7D1C7AA57A00C99201 /* ScreenUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScreenUtils.h; path = Utils/ScreenUtils.h; sourceTree = "<group>"; };
 		1E1BFD7E1C7AA57A00C99201 /* ScreenUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScreenUtils.m; path = Utils/ScreenUtils.m; sourceTree = "<group>"; };
+		1E2974FC1C83D76C009E4EF0 /* SoundHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoundHelper.h; path = Views/SoundHelper.h; sourceTree = "<group>"; };
+		1E2974FD1C83D76C009E4EF0 /* SoundHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SoundHelper.m; path = Views/SoundHelper.m; sourceTree = "<group>"; };
+		1E2974FF1C83D785009E4EF0 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		1E4322101C755D59000953B7 /* DateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateUtils.h; path = Utils/DateUtils.h; sourceTree = "<group>"; };
 		1E4322111C755D59000953B7 /* DateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateUtils.m; path = Utils/DateUtils.m; sourceTree = "<group>"; };
 		1E593A161C73FEA800AA1AB2 /* HttpUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpUtils.h; path = Utils/HttpUtils.h; sourceTree = "<group>"; };
@@ -105,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E2975001C83D785009E4EF0 /* AudioToolbox.framework in Frameworks */,
 				ECAB6A961C7380ED00594365 /* libsqlite3.tbd in Frameworks */,
 				5541BE0F01EC201D64B225C4 /* libPods.a in Frameworks */,
 			);
@@ -236,6 +242,8 @@
 		1EEB837C1C7ECD58009AF8D5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1E2974FC1C83D76C009E4EF0 /* SoundHelper.h */,
+				1E2974FD1C83D76C009E4EF0 /* SoundHelper.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -252,6 +260,7 @@
 		D665BADF1AEBB23F0C5C54FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1E2974FF1C83D785009E4EF0 /* AudioToolbox.framework */,
 				011361910B954799D80B5C44 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -464,6 +473,7 @@
 				1E752D111C7344C200F2EBB0 /* main.m in Sources */,
 				1E7266951C74015B004DFFC6 /* UserDefaultUtils.m in Sources */,
 				1E7D50BE1C7D788B00A2B3F5 /* TimerEx.m in Sources */,
+				1E2974FE1C83D76C009E4EF0 /* SoundHelper.m in Sources */,
 				EC52DCF21C74BD0100284E3A /* QuartzUIView.m in Sources */,
 				1E752D481C73453400F2EBB0 /* PersistenceUtils.m in Sources */,
 			);
