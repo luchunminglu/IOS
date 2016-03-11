@@ -262,10 +262,10 @@ static NSTimeInterval timeInterval = 15;
  */
 + (AFSecurityPolicy*) customSecurityPolicy{
     
-    //导入证书taocares.cer
-    NSString* cerPath = [[NSBundle mainBundle] pathForResource:@"taocares" ofType:@"cer"];
-    //读入byte buffer
-    NSData* cerData = [NSData dataWithContentsOfFile:cerPath];
+//    //导入证书taocares.cer
+//    NSString* cerPath = [[NSBundle mainBundle] pathForResource:@"taocares" ofType:@"cer"];
+//    //读入byte buffer
+//    NSData* cerData = [NSData dataWithContentsOfFile:cerPath];
     
     //使用证书验证模式
     AFSecurityPolicy* securityPolicy  = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate];
@@ -276,8 +276,10 @@ static NSTimeInterval timeInterval = 15;
     //不验证域名
     securityPolicy.validatesDomainName = NO;
     
-    //证书
-    securityPolicy.pinnedCertificates = [NSSet setWithObjects:cerData, nil];
+    //将服务器端证书（需要转换成cer格式）放到app项目资源里，AFSecurityPolicy会自动寻找根目录下所有cer文件
+    
+//    //证书
+//    securityPolicy.pinnedCertificates = [NSSet setWithObjects:cerData, nil];
     
     return securityPolicy;
 }
