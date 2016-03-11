@@ -21,6 +21,10 @@ static NSString* baseUri = @"https://192.168.163.228";
  */
 static NSTimeInterval timeInterval = 15;
 
+/**
+ *  Managers for background sessions must be owned for the duration of their use. This can be accomplished by creating an application-wide or shared singleton instance.
+ */
+AFHTTPSessionManager* httpManager = nil;
 
 @implementation HttpUtils
 
@@ -29,6 +33,7 @@ static NSTimeInterval timeInterval = 15;
 
 /**
  *  post请求
+ *  一个能够保存session回话的示例
  *
  *  @param segment  指定除主网站地址以外的其它部分 如 form/1
  *  @param formData formData 如果没有，传nil
@@ -37,23 +42,47 @@ static NSTimeInterval timeInterval = 15;
  */
 +(void) post:(NSString*) segment params:(NSDictionary*) formData success:(void (^) (id)) success failure:(void (^) (NSError*)) failure  {
     
-    AFHTTPSessionManager* manager = [AFHTTPSessionManager manager];
-    //使用
-    //manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+//    AFHTTPSessionManager* manager = [AFHTTPSessionManager manager];
+//    //使用
+//    //manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+//    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+//    
+//    //请求超时时间
+//    [manager.requestSerializer setTimeoutInterval: timeInterval];
+//    
+//    //设置请求编码格式
+//    [manager.requestSerializer setStringEncoding:NSUTF8StringEncoding];
+//    
+//    //设置响应编码格式
+//    [manager.responseSerializer setStringEncoding:NSUTF8StringEncoding];
+//    
+//    //加上 https ssl验证
+//    [manager setSecurityPolicy:[self customSecurityPolicy]];
     
-    //请求超时时间
-    [manager.requestSerializer setTimeoutInterval: timeInterval];
     
-    //设置请求编码格式
-    [manager.requestSerializer setStringEncoding:NSUTF8StringEncoding];
+    //AFHTTPSessionManager* manager = [AFHTTPSessionManager manager];
+    @synchronized([UIApplication sharedApplication]) {
+        if (httpManager == nil) {
+            httpManager = [AFHTTPSessionManager manager];
+            //使用
+            //manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+            httpManager.responseSerializer = [AFJSONResponseSerializer serializer];
+            
+            //请求超时时间
+            [httpManager.requestSerializer setTimeoutInterval: timeInterval];
+            
+            //设置请求编码格式
+            [httpManager.requestSerializer setStringEncoding:NSUTF8StringEncoding];
+            
+            //设置响应编码格式
+            [httpManager.responseSerializer setStringEncoding:NSUTF8StringEncoding];
+            
+            //加上 https ssl验证
+            [httpManager setSecurityPolicy:[self customSecurityPolicy]];
+        }
+    }
     
-    //设置响应编码格式
-    [manager.responseSerializer setStringEncoding:NSUTF8StringEncoding];
-    
-    //加上 https ssl验证
-    [manager setSecurityPolicy:[self customSecurityPolicy]];
-    
+    AFHTTPSessionManager* manager = httpManager;
     
     //构建url
     NSURL* url = [NSURL URLWithString:baseUri];
