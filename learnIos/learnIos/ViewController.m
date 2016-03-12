@@ -25,4 +25,6 @@
     
 }
 
+- (IBAction)btnClick:(id)sender {
+}
 @end

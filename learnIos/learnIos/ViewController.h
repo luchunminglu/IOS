@@ -11,5 +11,10 @@
 @interface ViewController : UIViewController
 
 
+@property (weak, nonatomic) IBOutlet UIButton *btn;
+
+
+- (IBAction)btnClick:(id)sender;
+
 @end
 

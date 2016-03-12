@@ -17,6 +17,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    NSString *UUID = [[NSUUID UUID] UUIDString];
+    NSLog(@"-------%@",UUID);
+    
+    UUID = [[NSUUID UUID] UUIDString];
+    NSLog(@"-------%@",UUID);
+    
     return YES;
 }
 
