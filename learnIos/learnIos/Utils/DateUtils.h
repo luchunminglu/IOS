@@ -32,4 +32,18 @@
  */
 +(NSDate*) convertToDate:(NSString*) str format:(NSString*) foramt;
 
+/**
+ *  获取当前时间
+ *
+ *  @return <#return value description#>
+ */
++(NSDate*) nowDate;
+
+/**
+ *  给date增减指定的秒数
+ *
+ *  @return <#return value description#>
+ */
++(NSDate*) addSeconds:(NSDate*) date add:(NSTimeInterval) seconds;
+
 @end

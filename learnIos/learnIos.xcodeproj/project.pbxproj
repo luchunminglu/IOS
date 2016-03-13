@@ -30,6 +30,11 @@
 		1EEB837F1C7ECD82009AF8D5 /* ToastUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EEB837E1C7ECD82009AF8D5 /* ToastUtils.m */; };
 		1EEB83821C7FDD99009AF8D5 /* JsonUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EEB83811C7FDD99009AF8D5 /* JsonUtils.m */; };
 		1EFF03271C9404B2003BD52D /* GuidUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFF03261C9404B2003BD52D /* GuidUtils.m */; };
+		1EFF032D1C94F524003BD52D /* DialogHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFF032C1C94F524003BD52D /* DialogHelper.m */; };
+		1EFF03331C950487003BD52D /* msg.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1EFF03311C950487003BD52D /* msg.wav */; };
+		1EFF03341C950487003BD52D /* system.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1EFF03321C950487003BD52D /* system.wav */; };
+		1EFF033C1C950CF4003BD52D /* NotificationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFF033B1C950CF4003BD52D /* NotificationUtils.m */; };
+		1EFF033F1C951058003BD52D /* MessageBarUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFF033E1C951058003BD52D /* MessageBarUtils.m */; };
 		5541BE0F01EC201D64B225C4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 011361910B954799D80B5C44 /* libPods.a */; };
 		EC52DCF21C74BD0100284E3A /* QuartzUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC52DCF11C74BD0100284E3A /* QuartzUIView.m */; };
 		EC52DCF51C74BE0B00284E3A /* UIColor+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = EC52DCF41C74BE0B00284E3A /* UIColor+Random.m */; };
@@ -99,6 +104,14 @@
 		1EEB83811C7FDD99009AF8D5 /* JsonUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JsonUtils.m; path = Utils/JsonUtils.m; sourceTree = "<group>"; };
 		1EFF03251C9404B2003BD52D /* GuidUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GuidUtils.h; path = Utils/GuidUtils.h; sourceTree = "<group>"; };
 		1EFF03261C9404B2003BD52D /* GuidUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GuidUtils.m; path = Utils/GuidUtils.m; sourceTree = "<group>"; };
+		1EFF032B1C94F524003BD52D /* DialogHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DialogHelper.h; path = Views/DialogHelper.h; sourceTree = "<group>"; };
+		1EFF032C1C94F524003BD52D /* DialogHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DialogHelper.m; path = Views/DialogHelper.m; sourceTree = "<group>"; };
+		1EFF03311C950487003BD52D /* msg.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = msg.wav; path = Sounds/msg.wav; sourceTree = "<group>"; };
+		1EFF03321C950487003BD52D /* system.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = system.wav; path = Sounds/system.wav; sourceTree = "<group>"; };
+		1EFF033A1C950CF4003BD52D /* NotificationUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationUtils.h; sourceTree = "<group>"; };
+		1EFF033B1C950CF4003BD52D /* NotificationUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationUtils.m; sourceTree = "<group>"; };
+		1EFF033D1C951058003BD52D /* MessageBarUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessageBarUtils.h; path = Views/MessageBarUtils.h; sourceTree = "<group>"; };
+		1EFF033E1C951058003BD52D /* MessageBarUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MessageBarUtils.m; path = Views/MessageBarUtils.m; sourceTree = "<group>"; };
 		D6B9683965A4298DEB1632DF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EC52DCF01C74BD0100284E3A /* QuartzUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuartzUIView.h; path = Removable/QuartzUIView.h; sourceTree = "<group>"; };
 		EC52DCF11C74BD0100284E3A /* QuartzUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuartzUIView.m; path = Removable/QuartzUIView.m; sourceTree = "<group>"; };
@@ -171,6 +184,7 @@
 		1E752D0E1C7344C200F2EBB0 /* learnIos */ = {
 			isa = PBXGroup;
 			children = (
+				1EFF032E1C9503A2003BD52D /* Sounds */,
 				1EEB837C1C7ECD58009AF8D5 /* Views */,
 				EC52DCEF1C74BC9F00284E3A /* Removable */,
 				1E7266961C7453F7004DFFC6 /* Controllers */,
@@ -249,8 +263,23 @@
 			children = (
 				1E2974FC1C83D76C009E4EF0 /* SoundHelper.h */,
 				1E2974FD1C83D76C009E4EF0 /* SoundHelper.m */,
+				1EFF032B1C94F524003BD52D /* DialogHelper.h */,
+				1EFF032C1C94F524003BD52D /* DialogHelper.m */,
+				1EFF033A1C950CF4003BD52D /* NotificationUtils.h */,
+				1EFF033B1C950CF4003BD52D /* NotificationUtils.m */,
+				1EFF033D1C951058003BD52D /* MessageBarUtils.h */,
+				1EFF033E1C951058003BD52D /* MessageBarUtils.m */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		1EFF032E1C9503A2003BD52D /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				1EFF03311C950487003BD52D /* msg.wav */,
+				1EFF03321C950487003BD52D /* system.wav */,
+			);
+			name = Sounds;
 			sourceTree = "<group>";
 		};
 		A9D503493389CED0B02294AF /* Pods */ = {
@@ -389,7 +418,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E752D221C7344C200F2EBB0 /* LaunchScreen.storyboard in Resources */,
+				1EFF03341C950487003BD52D /* system.wav in Resources */,
 				1E752D1F1C7344C200F2EBB0 /* Assets.xcassets in Resources */,
+				1EFF03331C950487003BD52D /* msg.wav in Resources */,
 				1E752D1A1C7344C200F2EBB0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,11 +494,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EFF033C1C950CF4003BD52D /* NotificationUtils.m in Sources */,
 				EC52DCF51C74BE0B00284E3A /* UIColor+Random.m in Sources */,
 				1E72668F1C74008C004DFFC6 /* StringUtils.m in Sources */,
 				1E7266921C740116004DFFC6 /* ThreadUtils.m in Sources */,
 				1EEB837F1C7ECD82009AF8D5 /* ToastUtils.m in Sources */,
 				1E752D171C7344C200F2EBB0 /* ViewController.m in Sources */,
+				1EFF032D1C94F524003BD52D /* DialogHelper.m in Sources */,
+				1EFF033F1C951058003BD52D /* MessageBarUtils.m in Sources */,
 				1E72669C1C745458004DFFC6 /* MainViewController.m in Sources */,
 				1E1BFD7F1C7AA57A00C99201 /* ScreenUtils.m in Sources */,
 				1EEB83821C7FDD99009AF8D5 /* JsonUtils.m in Sources */,

@@ -15,5 +15,10 @@
  */
 +(void) vibrate;
 
+/**
+ *  播放声音
+ */
++(void) playSound;
+
 
 @end

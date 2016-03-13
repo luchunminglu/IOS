@@ -8,6 +8,7 @@
 
 #import "TimerEx.h"
 #import "ThreadUtils.h"
+#import "NotificationUtils.h"
 
 
 @interface TimerEx()
@@ -45,10 +46,9 @@
  *  @param timer <#timer description#>
  */
 - (void)timerCallback:(NSTimer *)timer{
-     NSLog(@"timer thread -- %@",[NSThread currentThread]);
-    [ThreadUtils dispatch:^{
-     NSLog(@"dispatch thread -- %@",[NSThread currentThread]);
-    } ];
+    [ThreadUtils dispatchMain:^{
+        
+    }];
 }
 
 /**

@@ -42,4 +42,26 @@
     return [formatter dateFromString:str];
 }
 
+/**
+ *  获取当前时间
+ *
+ *  @return <#return value description#>
+ */
++(NSDate*) nowDate{
+    return [NSDate date];
+}
+
+/**
+ *  给date增减指定的秒数
+ *  NSTimeInterval = double
+ *
+ *  @return <#return value description#>
+ */
++(NSDate*) addSeconds:(NSDate*) date add:(NSTimeInterval)seconds{
+    //负数返回之前时间，正数返回之后时间
+    return [date dateByAddingTimeInterval:seconds];
+}
+
+
+
 @end

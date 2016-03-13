@@ -7,6 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "DialogHelper.h"
+#include "SoundHelper.h"
+#include "ThreadUtils.h"
+#include "NotificationUtils.h"
+#include "MessageBarUtils.h"
 
 @interface ViewController ()
 
@@ -25,6 +30,14 @@
     
 }
 
+/**
+ *  Button响应
+ *
+ *  @param sender <#sender description#>
+ */
 - (IBAction)btnClick:(id)sender {
+
+    [MessageBarUtils showMessage:@"title" content:@"content"];
+
 }
 @end
