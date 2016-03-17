@@ -22,7 +22,7 @@
  *  @return <#return value description#>
  */
 +(BOOL) equals:(NSString *)s1 To:(NSString *)s2 ByIgnoreCase:(BOOL)isIgnoreCase{
-    if([self isNullOrWhiteSpace:s1] || [self isNullOrWhiteSpace:s2]){
+    if([self isNullOrWhiteSpace:s1] && [self isNullOrWhiteSpace:s2]){
         return YES;
     }
     
