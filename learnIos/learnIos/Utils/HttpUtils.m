@@ -281,6 +281,62 @@ AFHTTPSessionManager* httpManager = nil;
 
 
 
+/**
+ *  get 请求
+ *
+ *  @param segment     指定除主网站地址以外的其它部分 如 form/1
+ *  @param requestData request数据，如果没有传nil
+ *  @param success     success回调
+ *  @param failure     failure回调
+ */
++(void) getXml:(NSString*) segment params:(NSDictionary*) requestData success:(void (^) (id)) success failure:(void (^) (NSError*)) failure {
+    
+    AFHTTPSessionManager* manager = [AFHTTPSessionManager manager];
+    
+    //manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    manager.responseSerializer = [AFXMLParserResponseSerializer serializer];
+    
+    //请求超时时间
+    [manager.requestSerializer setTimeoutInterval: timeInterval];
+    
+    //设置请求编码格式
+    [manager.requestSerializer setStringEncoding:NSUTF8StringEncoding];
+    
+    //设置响应编码格式
+    [manager.responseSerializer setStringEncoding:NSUTF8StringEncoding];
+    
+    //加上 https ssl验证
+    [manager setSecurityPolicy:[self customSecurityPolicy]];
+    
+    
+    //构建url
+    NSURL* url = [NSURL URLWithString:baseUri];
+    
+    if (![StringUtils isNullOrWhiteSpace:segment]) {
+        url = [NSURL URLWithString:segment relativeToURL: [NSURL URLWithString:baseUri]];
+    }
+    
+    
+    NSLog(@"Get调用地址 %@",[url absoluteString]);
+    
+    //注：该方法是异步调用的
+    [manager GET:[url absoluteString] parameters:requestData progress:nil success:^(NSURLSessionTask* task, id responseObject){
+        //NSLog(@"success ----  %@",responseObject);
+        if(success){
+            //回调
+            success(responseObject);
+        }
+    }failure:^(NSURLSessionTask* operation, NSError* error){
+        NSLog(@"falied ---- %@",error);
+        if(failure){
+            //回调
+            failure(error);
+        }
+    }];
+    
+}
+
+
 
 #pragma mark -辅助私有方法
 

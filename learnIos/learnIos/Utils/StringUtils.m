@@ -191,4 +191,32 @@
 }
 
 
+/**
+ *  获取app的名字
+ *
+ *  @return <#return value description#>
+ */
++(NSString*) appName{
+    return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];
+}
+
+/**
+ *  获取app的build号
+ *
+ *  @return <#return value description#>
+ */
++(NSString*) appBuild{
+    return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
+}
+
+
+/**
+ *  获取app的version号
+ *
+ *  @return <#return value description#>
+ */
++(NSString*) appVersion{
+    return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+}
+
 @end

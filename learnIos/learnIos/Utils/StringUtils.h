@@ -83,4 +83,26 @@
  */
 +(NSArray*) split:(NSString*) s1;
 
+/**
+ *  获取app的名字
+ *
+ *  @return <#return value description#>
+ */
++(NSString*) appName;
+
+/**
+ *  获取app的build号
+ *
+ *  @return <#return value description#>
+ */
++(NSString*) appBuild;
+
+
+/**
+ *  获取app的version号
+ *
+ *  @return <#return value description#>
+ */
++(NSString*) appVersion;
+
 @end
